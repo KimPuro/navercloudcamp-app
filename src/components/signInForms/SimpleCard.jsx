@@ -139,7 +139,7 @@ export default function SimpleCard() {
 
                     <p className="mt-10 text-center text-sm text-gray-500">
                         회원이 아니신가요?{' '}
-                        <Link href="@/app/user/join" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+                        <Link href="/user/join" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
                             여기를 눌러 가입하세요!
                         </Link>
                     </p>
