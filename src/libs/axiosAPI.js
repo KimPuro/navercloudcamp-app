@@ -22,6 +22,20 @@ export const axiosGet = async (path) => {
         return null;
     }
 }
+export const axiosPostLogin =  (username,password,path)=> {
+    axios.post(`${AXIOS_API}${path}`, {
+        username : username,
+        password : password
+    })
+        .then(function (response) {
+            console.log(response.data.message);
+            return response.data.message;
+        })
+        .catch(function (error) {
+            console.log(error);
+            return null;
+        });
+}
 
 
 

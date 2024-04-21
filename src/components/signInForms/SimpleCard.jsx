@@ -1,9 +1,22 @@
 'use client'
 import React,{useState, useEffect} from "react";
-import {getUser} from "@/libs/axiosAPI";
+import {axiosGet, axiosPostLogin, getUser} from "@/libs/axiosAPI";
 import Link from "next/link";
 
 export default function SimpleCard() {
+    const [username,setUsername] = useState("");
+    const [password , setPassword] = useState("");
+
+/*
+    useEffect(() => {
+        const fetchUser = async () => {
+            const result = await axiosPostLogin("qwerty","1234","/users/login");  // 비동기 함수 호출
+            setPeople(result);  // 결과를 people 상태에 저장
+        };
+
+        fetchPeople();
+    }, []);  // 컴포넌트 마운트 시 한 번만 실행
+*/
 
     return (
         <>
