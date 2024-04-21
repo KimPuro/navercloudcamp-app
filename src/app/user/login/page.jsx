@@ -6,8 +6,8 @@ export default function Home() {
   return (
 <>
   <WithRightAlignedNav/>
-    <SimpleCard/>
-  <CenteredWithSingleAction/>
+{/*    <SimpleCard/>
+  <CenteredWithSingleAction/>*/}
 </>
   );
 }
