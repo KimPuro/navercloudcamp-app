@@ -23,8 +23,11 @@ const handlePasswordChange = (e) => {
 const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await loginPost(username, password);
-    if(res.message==="Login success") {
+    if(res.message==="SUCCESS") {
         setResult("성공입니다.");
+    }
+    else{
+        setResult("실패입니다.");
     }
     console.log(result);
     }
