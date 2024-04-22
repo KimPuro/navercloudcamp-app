@@ -4,11 +4,13 @@ import Link from "next/link";
 import img from "next/image";
 import {loginPost} from "@/app/utils/loginPost";
 import {useRouter} from "next/navigation";
+import CenteredWithSingleAction from "@/components/dialogs/CenteredWithSingleAction";
+import CenteredWithSingleAction2 from "@/components/dialogs/CenteredWithSingleAction2";
 
 export default function LoginModal() {
 const [username, setUsername] = useState('');
 const [password, setPassword] = useState('');
-const [result, setResult] = useState('');
+const [loginStatus, setLoginStatus] = useState(null);
     const router = useRouter();
 
 const handleUsernameChange = (e) => {
@@ -20,16 +22,19 @@ const handlePasswordChange = (e) => {
     const onClickClose = () => {
         router.back();
     };
-const handleSubmit = async (e) => {
-    e.preventDefault();
-    const res = await loginPost(username, password);
-    if(res.message==="SUCCESS") {
-        setResult("성공입니다.");
-    }
-    else{
-        setResult("실패입니다.");
-    }
-    console.log(result);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const res = await loginPost(username, password);
+        if (res.message === "SUCCESS") {
+            setLoginStatus('success');
+        } else {
+            setLoginStatus('failure');
+        }
+    };
+    if (loginStatus === 'success') {
+        return <CenteredWithSingleAction />;
+    } else if (loginStatus === 'failure') {
+        return <CenteredWithSingleAction2 />;
     }
     return (
         <>
@@ -110,7 +115,7 @@ const handleSubmit = async (e) => {
                                 >
                                     Sign in
                                 </button>
-                                <p className="text-center m-3">{result}</p>
+                                <p className="text-center m-3">{loginStatus}</p>
                             </div>
                         </form>
 

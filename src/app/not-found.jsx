@@ -1,7 +1,12 @@
+"use client"
+import WithNavbarAndFooter from "@/components/feedback/WithNavbarAndFooter";
+import WithBackgroundImage from "@/components/feedback/WithBackgroundImage";
+import SplitWithImage from "@/components/feedback/SplitWithImage";
+
 export default function NotFound() {
     return (
-        <div>
-            <h1>404 - Page Not Found</h1>
-        </div>
+        <>
+            <SplitWithImage/>
+        </>
     );
 }
