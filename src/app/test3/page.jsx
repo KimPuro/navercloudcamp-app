@@ -1,16 +1,8 @@
-const getPost = async (postId) =>{
-    const res = await fetch(`http://localhost:8080/api/users/list`);
-    return res.json();
+import {GetTest} from '/src/components/test/GetTest.jsx';
+const PostPage = () => {
+    return (<>PostPage</>
+        /*<PostDetailPage/>*/
+    );
 }
 
-const PostDetailPage = async ({
-    params:{ postId }
-})=>{
-    const post = await getPost(postId);
-
-    return (
-        <div>
-            {post.name}
-        </div>
-    )
-}
+export default PostPage;
