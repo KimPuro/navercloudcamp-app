@@ -11,16 +11,3 @@ export const loginPost = async (username,password) => {
     });
     return res.json();
 }
-export const LoginPostComponent = async (username, password) => {
-    const user = await loginPost(username, password);
-    let mes="";
-    if (user.status===404){
-        mes = "성공"
-    }
-    console.log(user);
-    return (<>
-            {user.status}
-            {mes}
-        </>
-    );
-}

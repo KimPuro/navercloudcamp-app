@@ -18,7 +18,9 @@ const handlePasswordChange = (e) => {
 const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await loginPost(username, password);
-    setResult(res.message);
+    if(res.message==="Login success") {
+        setResult("성공입니다.");
+    }
     console.log(result);
     }
     return (
@@ -100,11 +102,12 @@ const handleSubmit = async (e) => {
                                 >
                                     Sign in
                                 </button>
+                                <p className="text-center m-3">{result}</p>
                             </div>
                         </form>
 
                         <div>
-                            <div className="relative mt-10">
+                            <div className="relative mt-0">
                                 <div className="absolute inset-0 flex items-center" aria-hidden="true">
                                     <div className="w-full border-t border-gray-200" />
                                 </div>
@@ -164,7 +167,6 @@ const handleSubmit = async (e) => {
                     </p>
                 </div>
             </div>
-            <div>{result}</div>
         </>
     )
 }
