@@ -1,23 +1,26 @@
 'use client'
-import React,{useState, useEffect} from "react";
-import {axiosGet, axiosPostLogin, getUser} from "@/libs/axiosAPI";
+import React, {useState} from "react";
 import Link from "next/link";
+import img from "next/image";
+import {loginPost, LoginPostComponent} from "@/app/utils/loginPost";
 
 export default function SimpleCard() {
-    const [username,setUsername] = useState("");
-    const [password , setPassword] = useState("");
+const [username, setUsername] = useState('');
+const [password, setPassword] = useState('');
+const [result, setResult] = useState('');
 
-/*
-    useEffect(() => {
-        const fetchUser = async () => {
-            const result = await axiosPostLogin("qwerty","1234","/users/login");  // 비동기 함수 호출
-            setPeople(result);  // 결과를 people 상태에 저장
-        };
-
-        fetchPeople();
-    }, []);  // 컴포넌트 마운트 시 한 번만 실행
-*/
-
+const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+}
+const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+}
+const handleSubmit = async (e) => {
+    e.preventDefault();
+    const res = await loginPost(username, password);
+    setResult(res.message);
+    console.log(result);
+    }
     return (
         <>
             <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -36,17 +39,18 @@ export default function SimpleCard() {
                     <div className="bg-white px-6 py-12 shadow sm:rounded-lg sm:px-12">
                         <form className="space-y-6" action="#" method="POST">
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
                                     Email address
                                 </label>
                                 <div className="mt-2">
                                     <input
-                                        id="email"
-                                        name="email"
-                                        type="email"
-                                        autoComplete="email"
+                                        id="username"
+                                        name="username"
+                                        type="username"
+                                        autoComplete="username"
                                         required
                                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                        onChange={handleUsernameChange}
                                     />
                                 </div>
                             </div>
@@ -63,6 +67,7 @@ export default function SimpleCard() {
                                         autoComplete="current-password"
                                         required
                                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                        onChange={handlePasswordChange}
                                     />
                                 </div>
                             </div>
@@ -91,6 +96,7 @@ export default function SimpleCard() {
                                 <button
                                     type="submit"
                                     className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    onClick={handleSubmit}
                                 >
                                     Sign in
                                 </button>
@@ -158,6 +164,7 @@ export default function SimpleCard() {
                     </p>
                 </div>
             </div>
+            <div>{result}</div>
         </>
     )
 }

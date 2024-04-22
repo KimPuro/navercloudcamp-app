@@ -1,6 +1,6 @@
 
 
-import SimpleCard from "@/app/test/page";
+import SimpleCard from "@/app/logintest/page";
 
 const Homeee = () =>{
     return (
