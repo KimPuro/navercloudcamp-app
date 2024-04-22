@@ -2,12 +2,14 @@
 import React, {useState} from "react";
 import Link from "next/link";
 import img from "next/image";
-import {loginPost, LoginPostComponent} from "@/app/utils/loginPost";
+import {loginPost} from "@/app/utils/loginPost";
+import {useRouter} from "next/navigation";
 
-export default function SimpleCard() {
+export default function LoginModal() {
 const [username, setUsername] = useState('');
 const [password, setPassword] = useState('');
 const [result, setResult] = useState('');
+    const router = useRouter();
 
 const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -15,6 +17,9 @@ const handleUsernameChange = (e) => {
 const handlePasswordChange = (e) => {
     setPassword(e.target.value);
 }
+    const onClickClose = () => {
+        router.back();
+    };
 const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await loginPost(username, password);
@@ -25,7 +30,7 @@ const handleSubmit = async (e) => {
     }
     return (
         <>
-            <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+            <div className="flex flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8 absolute top-0 bottom-0 right-0 left-0 backdrop-blur-lg">
                 <div className="sm:mx-auto sm:w-full sm:max-w-md">
                     <img
                         className="mx-auto h-10 w-auto"
@@ -36,13 +41,13 @@ const handleSubmit = async (e) => {
                         Sign in to your account
                     </h2>
                 </div>
-
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
                     <div className="bg-white px-6 py-12 shadow sm:rounded-lg sm:px-12">
                         <form className="space-y-6" action="#" method="POST">
                             <div>
+                                <button onClick={onClickClose}>돌아가기</button>
                                 <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
-                                    Email address
+                                    아이디
                                 </label>
                                 <div className="mt-2">
                                     <input
@@ -59,7 +64,7 @@ const handleSubmit = async (e) => {
 
                             <div>
                                 <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                                    Password
+                                    비밀번호
                                 </label>
                                 <div className="mt-2">
                                     <input
