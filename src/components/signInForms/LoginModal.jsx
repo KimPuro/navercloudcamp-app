@@ -2,7 +2,7 @@
 import React, {useState} from "react";
 import Link from "next/link";
 import img from "next/image";
-import {loginPost} from "@/app/utils/loginPost";
+import {loginPost} from "@/utils/loginPost";
 import {useRouter} from "next/navigation";
 import CenteredWithSingleAction from "@/components/dialogs/CenteredWithSingleAction";
 import CenteredWithSingleAction2 from "@/components/dialogs/CenteredWithSingleAction2";
