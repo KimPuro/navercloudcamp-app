@@ -14,7 +14,7 @@ export default function SideBySide() {
                             <figcaption className="mt-10 flex items-center gap-x-6">
                                 <img
                                     className="h-14 w-14 rounded-full bg-gray-50"
-                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                    src="/images/hong.png"
                                     alt=""
                                 />
                                 <div className="text-base">
@@ -35,7 +35,7 @@ export default function SideBySide() {
                             <figcaption className="mt-10 flex items-center gap-x-6">
                                 <img
                                     className="h-14 w-14 rounded-full bg-gray-50"
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                    src="/images/last.png"
                                     alt=""
                                 />
                                 <div className="text-base">

@@ -27,9 +27,8 @@ export default function WithOverlappingImage() {
                                 <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
                             </svg>
                             <blockquote className="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                                <p>
-                                    도커를 사용하면 마음이 불구가 된다.
-                                </p>
+                                <p>도커는 사람의 마음을 아프게 한다.</p>
+                                <p>따라서 도커 교육은 불법으로 지정해야 한다.</p>
                             </blockquote>
                             <figcaption className="mt-8 text-base">
                                 <div className="font-semibold text-white">전현석</div>

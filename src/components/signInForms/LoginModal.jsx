@@ -38,7 +38,7 @@ const handlePasswordChange = (e) => {
     }
     return (
         <>
-            <div className="flex flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8 absolute top-0 bottom-0 right-0 left-0 backdrop-blur-lg">
+            <div className="flex flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8 absolute top-0 bottom-0 right-0 left-0 backdrop-blur-lg  z-40">
                 <div className="sm:mx-auto sm:w-full sm:max-w-md">
                     <img
                         className="mx-auto h-10 w-auto"
