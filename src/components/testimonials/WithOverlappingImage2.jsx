@@ -1,4 +1,6 @@
+import "@/styles/animations.css";
 export default function WithOverlappingImage2() {
+
     return (
         <div className="bg-white pb-16 pt-24 sm:pb-24 sm:pt-32 xl:pb-32">
             <div className="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
@@ -6,7 +8,7 @@ export default function WithOverlappingImage2() {
                     <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                         <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                             <img
-                                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl blowup"
                                 src="/images/hong.png"
                                 alt=""
                             />
