@@ -4,11 +4,11 @@ import {axiosGet} from "@/libs/axiosAPI";
 
 
 export default function WithVerticalLines() {
-    const [board, setboard] = useState([]);  // people 상태 정의
+    const [board, setBoard] = useState([]);  // people 상태 정의
     useEffect(() => {
         const fetchBoard = async () => {
             const result = await axiosGet("/board/list");  // 비동기 함수 호출
-            setboard(result);  // 결과를 people 상태에 저장
+            setBoard(result);  // 결과를 people 상태에 저장
         };
 
         fetchBoard();
