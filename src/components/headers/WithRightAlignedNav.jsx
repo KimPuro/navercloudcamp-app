@@ -6,9 +6,9 @@ import Link from "next/link";
 import "@/styles/club.css";
 
 const navigation = [
-    { name: 'UserList', href: '/list' },
-    { name: 'CSS Club', href: '/css/club' },
-    { name: 'Marketplace', href: '#' },
+    { name: '유저 목록', href: '/list' },
+    { name: '게시판', href: '/asdaf' },
+    { name: '뭐하지', href: '/asdasd' },
 ]
 
 export default function WithRightAlignedNav() {

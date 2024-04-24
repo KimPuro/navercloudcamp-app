@@ -4,6 +4,7 @@
 
 html {
   @apply h-full;
+  font-family: "Nanum Gothic", sans-serif;
 }
 body {
   @apply h-full;

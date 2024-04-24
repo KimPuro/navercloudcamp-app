@@ -2,7 +2,9 @@
 #mr-egg-sushi {
     width: 300px;
     height: 300px;
+    animation: shake-lr 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite;
 }
+
 .club-div{
     display: flex;
     justify-content: center;
@@ -12,7 +14,9 @@
 
 .club {
     animation: color-change-3x 4s linear infinite alternate both;
-
+}
+.club:hover{
+    animation: color-change-3x 4s linear infinite alternate both,shake-lr 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite;
 }
 
 @keyframes color-change-3x {
@@ -51,4 +55,33 @@
         background: #4fff95;
     }
 }
+@keyframes shake-lr {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+    10% {
+        transform: rotate(8deg);
+    }
+    20%,
+    40%,
+    60% {
+        transform: rotate(-10deg);
+    }
+    30%,
+    50%,
+    70% {
+        transform: rotate(10deg);
+    }
+    80% {
+        transform: rotate(-8deg);
+    }
+    90% {
+        transform: rotate(8deg);
+    }
+}
+
+
 
