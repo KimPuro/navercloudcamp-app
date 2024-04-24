@@ -2,6 +2,10 @@
 import {useEffect, useState} from "react";
 import {axiosGet} from "@/libs/axiosAPI";
 
+/*const people = [
+    { boardName: '게시판 이름', explanation: '게시판 설명', recent: '최근 글', count: '글 수', path : "#"},
+]*/
+
 
 export default function WithVerticalLines() {
     const [board, setBoard] = useState([]);  // people 상태 정의
