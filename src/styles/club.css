@@ -2,7 +2,7 @@
 #mr-egg-sushi {
     width: 300px;
     height: 300px;
-    animation: shake-lr 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite;
+    animation: shake-lr 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite, pulsate-fwd 0.5s ease-in-out infinite both,bounce-top 0.9s both/*, vibrate-3 0.5s linear infinite both*/;;
 }
 
 .club-div{
@@ -80,6 +80,90 @@
     }
     90% {
         transform: rotate(8deg);
+    }
+}
+@keyframes pulsate-fwd {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/*@keyframes vibrate-3 {
+     0% {
+         transform: translate(0);
+     }
+     10% {
+         transform: translate(-2px, -2px);
+     }
+     20% {
+         transform: translate(2px, -2px);
+     }
+     30% {
+         transform: translate(-2px, 2px);
+     }
+     40% {
+         transform: translate(2px, 2px);
+     }
+     50% {
+         transform: translate(-2px, -2px);
+     }
+     60% {
+         transform: translate(2px, -2px);
+     }
+     70% {
+         transform: translate(-2px, 2px);
+     }
+     80% {
+         transform: translate(-2px, -2px);
+     }
+     90% {
+         transform: translate(2px, -2px);
+     }
+     100% {
+         transform: translate(0);
+     }
+ }*/
+@keyframes bounce-top {
+    0% {
+        transform: translateY(-45px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    24% {
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-24px);
+        animation-timing-function: ease-in;
+    }
+    65% {
+        transform: translateY(-12px);
+        animation-timing-function: ease-in;
+    }
+    82% {
+        transform: translateY(-6px);
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateY(-4px);
+        animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+        opacity: 1;
     }
 }
 
