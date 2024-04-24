@@ -15,7 +15,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function WithCheckboxes() {
     const checkbox = useRef();
     const [checked, setChecked] = useState(false);
     const [indeterminate, setIndeterminate] = useState(false);

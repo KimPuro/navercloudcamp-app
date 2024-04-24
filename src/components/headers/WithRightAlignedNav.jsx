@@ -3,12 +3,12 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from "next/link";
+import "@/styles/club.css";
 
 const navigation = [
-    { name: 'UserList', href: '/list' },
-    { name: 'CSS Club', href: '/css/club' },
-    { name: 'Marketplace', href: '#' },
-    { name: 'Company', href: '#' },
+    { name: '유저 목록', href: '/list' },
+    { name: '게시판', href: '/asdaf' },
+    { name: '뭐하지', href: '/asdasd' },
 ]
 
 export default function WithRightAlignedNav() {
@@ -33,11 +33,16 @@ export default function WithRightAlignedNav() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
-                        <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+                        <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900 p-1">
                             {item.name}
                         </Link>
+
                     ))}
-                    <Link href="/user/login" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link key={"CSS Club"} href="/css/club" className="text-sm font-semibold leading-6 text-gray-900 club rounded-full p-1">
+                        {"CSS Club"}
+                    </Link>
+
+                    <Link href="/user/login" className="text-sm font-semibold leading-6 text-gray-900 p-1">
                         Log in <span aria-hidden="true">&rarr;</span>
                     </Link>
                 </div>
@@ -75,10 +80,18 @@ export default function WithRightAlignedNav() {
                                         {item.name}
                                     </Link>
                                 ))}
+                                <Link
+                                    key={"CSS Club"}
+                                    href={"/css/club"}
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 club"
+                                >
+                                    {"CSS Club"}
+                                </Link>
                             </div>
+
                             <div className="py-6">
                                 <Link
-                                    href="#"
+                                    href="/user/login"
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Log in
