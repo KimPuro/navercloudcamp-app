@@ -1,5 +1,5 @@
 export const loginPost = async (username,password) => {
-    const res = await fetch("http://10.10.10.2:8080/api/users/login", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
