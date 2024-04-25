@@ -7,7 +7,7 @@ import "@/styles/club.css";
 
 const navigation = [
     { name: '유저 목록', href: '/list' },
-    { name: '게시판', href: '/asdaf' },
+    { name: '게시판', href: '/board' },
     { name: '뭐하지', href: '/asdasd' },
 ]
 
