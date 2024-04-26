@@ -1,5 +1,5 @@
 import "@/styles/animations.css";
-export default function WithOverlappingImage2() {
+export default function Bean() {
 
     return (
         <div className="bg-white pb-16 pt-24 sm:pb-24 sm:pt-32 xl:pb-32">
@@ -9,8 +9,8 @@ export default function WithOverlappingImage2() {
                         <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                             <img
                                 className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl blowup"
-                                src="/images/hong.png"
-                                alt=""
+                                src="/images/bean3.jpg"
+                                alt="최은빈의 사진"
                             />
                         </div>
                     </div>
@@ -29,15 +29,14 @@ export default function WithOverlappingImage2() {
                                 <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
                             </svg>
                             <blockquote className="text-xl font-semibold leading-8 text-white sm:text-1xl sm:leading-9">
-                                <p>나는 진정한 프로그래머가 아니다.</p>
-                                <p>진정한 프로그래머는 ‘네, 되긴 하지만 </p>
-                                <p>여기저기서 메모리 누수가 발생합니다.</p>
-                                <p>아마 수정해야겠지요’ 라고 말한다.</p>
-                                <p>나는 그냥 요청이 10번 들어올 때마다 스프링을 재시작한다.</p>
+                                <p>@RequestBody 가 import springframework 여야 하는데, </p>
+                                <p>아래 보면 swagger 것으로 보인다.</p>
+                                <p>이러면 넘어오는 값들이 전부 null 이다</p>
+
 
                             </blockquote>
                             <figcaption className="mt-8 text-base">
-                                <div className="font-semibold text-white">임홍균</div>
+                                <div className="font-semibold text-white">최은빈</div>
                                 <div className="mt-1 text-gray-400">백수</div>
                             </figcaption>
                         </figure>

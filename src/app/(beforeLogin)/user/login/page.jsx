@@ -1,5 +1,5 @@
 import SimpleCard from "@/components/signInForms/LoginModal";
-import CenteredWithSingleAction from "@/components/dialogs/CenteredWithSingleAction";
+import LoginSuccess from "@/components/dialogs/LoginSuccess";
 import Navbar from "@/components/headers/Navbar";
 
 export default function Home() {

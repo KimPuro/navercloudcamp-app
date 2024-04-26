@@ -1,6 +1,7 @@
 'use client'
 import {useEffect, useLayoutEffect, useRef, useState} from 'react'
 import {axiosGet} from "@/libs/axiosAPI";
+import OnDark from "@/components/banners/OnDark";
 
 /*[
     {
@@ -15,7 +16,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function WithCheckboxes() {
+export default function UserList() {
     const checkbox = useRef();
     const [checked, setChecked] = useState(false);
     const [indeterminate, setIndeterminate] = useState(false);
@@ -46,6 +47,9 @@ export default function WithCheckboxes() {
         setSelectedPeople(checked || indeterminate ? [] : people)
         setChecked(!checked && !indeterminate)
         setIndeterminate(false)
+    }
+    if(people === null) {
+        return <OnDark/>;
     }
 
     return (

@@ -4,7 +4,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/24/outline'
 import Link from "next/link";
 
-export default function CenteredWithSingleAction() {
+export default function JoinSuccess() {
     const [open, setOpen] = useState(true)
 
     return (
@@ -40,25 +40,25 @@ export default function CenteredWithSingleAction() {
                                     </div>
                                     <div className="mt-3 text-center sm:mt-5">
                                         <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
-                                            로그인 성공
+                                            회원가입 성공
                                         </Dialog.Title>
                                         <div className="mt-2">
                                             <p className="text-sm text-gray-500">
-                                                로그인에 성공했습니다.
+                                                회원가입에 성공했습니다.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <Link href="/list">
-                                <div className="mt-5 sm:mt-6">
-                                    <button
-                                        type="button"
-                                        className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                        onClick={() => setOpen(false)}
-                                    >
-                                        Go back to dashboard
-                                    </button>
-                                </div></Link>
+                                <Link href="/">
+                                    <div className="mt-5 sm:mt-6">
+                                        <button
+                                            type="button"
+                                            className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                            onClick={() => setOpen(false)}
+                                        >
+                                            메인으로
+                                        </button>
+                                    </div></Link>
                             </Dialog.Panel>
                         </Transition.Child>
                     </div>

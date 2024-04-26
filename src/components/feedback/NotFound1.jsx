@@ -1,4 +1,4 @@
-export default function SplitWithImage() {
+export default function NotFound1() {
     return (
         <>
             <div className="grid min-h-full grid-cols-1 grid-rows-[1fr,auto,1fr] bg-white lg:grid-cols-[max(50%,36rem),1fr]">

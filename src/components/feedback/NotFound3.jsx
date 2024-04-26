@@ -35,7 +35,7 @@ const footer = {
     ],
 }
 
-export default function WithNavbarAndFooter() {
+export default function NotFound3() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (

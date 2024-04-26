@@ -1,15 +1,17 @@
-import SideBySide from "@/components/testimonials/SideBySide";
-import WithOverlappingImage from "@/components/testimonials/WithOverlappingImage";
+import MainMiddle from "@/components/testimonials/MainMiddle";
+import Last from "@/components/testimonials/Last";
 import Navbar from "@/components/headers/Navbar";
-import WithOverlappingImage2 from "@/components/testimonials/WithOverlappingImage2";
+import Hong from "@/components/testimonials/Hong";
+import Bean from "@/components/testimonials/Bean";
 
 export default function Home() {
     return (
         <>
             <Navbar/>
-            <SideBySide/>
-            <WithOverlappingImage2/>
-            <WithOverlappingImage/>
+            <MainMiddle/>
+            <Hong/>
+            <Last/>
+            <Bean/>
         </>
     );
 }

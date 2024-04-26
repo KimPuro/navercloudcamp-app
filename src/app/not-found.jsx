@@ -1,10 +1,10 @@
 "use client"
-import SplitWithImage from "@/components/feedback/SplitWithImage";
+import NotFound1 from "@/components/feedback/NotFound1";
 
 export default function NotFound() {
     return (
         <>
-            <SplitWithImage/>
+            <NotFound1/>
         </>
     );
 }

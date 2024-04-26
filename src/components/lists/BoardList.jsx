@@ -1,22 +1,26 @@
 "use client";
 import {useEffect, useState} from "react";
 import {axiosGet} from "@/libs/axiosAPI";
+import OnDark from "@/components/banners/OnDark";
 
 /*const people = [
     { boardName: '게시판 이름', explanation: '게시판 설명', recent: '최근 글', count: '글 수', path : "#"},
 ]*/
 
 
-export default function WithVerticalLines() {
+export default function BoardList() {
     const [board, setBoard] = useState([]);  // people 상태 정의
     useEffect(() => {
         const fetchBoard = async () => {
-            const result = await axiosGet("/board/list");  // 비동기 함수 호출
+            const result = await axiosGet("/boards/list");  // 비동기 함수 호출
             setBoard(result);  // 결과를 people 상태에 저장
         };
 
         fetchBoard();
     }, []);  // 컴포넌트 마운트 시 한 번만 실행
+    if (board===null){
+        return <OnDark/>;
+    }
     return (
         <div className="px-4 sm:px-6 lg:px-8">
             <div className="sm:flex sm:items-center">
@@ -56,14 +60,14 @@ export default function WithVerticalLines() {
                             </tr>
                             </thead>
                             <tbody className="divide-y divide-gray-200 bg-white">
-                            {people.map((person) => (
-                                <tr key={person.boardName} className="divide-x divide-gray-200">
+                            {board.map((b) => (
+                                <tr key={b.boardName} className="divide-x divide-gray-200">
                                     <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 sm:pl-0" >
-                                        <a href={person.path}>{person.boardName}</a>
+                                        <a href={b.path}>{b.boardName}</a>
                                     </td>
-                                    <td className="whitespace-nowrap p-4 text-sm text-gray-500">{person.explanation}</td>
-                                    <td className="whitespace-nowrap p-4 text-sm text-gray-500">{person.recent}</td>
-                                    <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-0">{person.count}</td>
+                                    <td className="whitespace-nowrap p-4 text-sm text-gray-500">{b.explanation}</td>
+                                    <td className="whitespace-nowrap p-4 text-sm text-gray-500">{b.recent}</td>
+                                    <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-0">{b.count}</td>
                                 </tr>
                             ))}
                             </tbody>
