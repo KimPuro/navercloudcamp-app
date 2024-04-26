@@ -8,7 +8,10 @@ import "@/styles/club.css";
 const navigation = [
     { name: '유저 목록', href: '/list' },
     { name: '게시판', href: '/board' },
-    { name: '뭐하지', href: '/asdasd' },
+    { name: 'test', href: '/test/test1' },
+    { name: 'test2', href: '/test/test2' },
+    { name: 'test3', href: '/test/test3' },
+    { name: '랜덤 고양이 사진', href: '/random/cats' },
 ]
 
 export default function WithRightAlignedNav() {
@@ -18,8 +21,8 @@ export default function WithRightAlignedNav() {
         <header className="bg-white border rounded-lg w-full z-30">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <Link href="/" className="-m-1.5 p-1.5">
-                    <span className="sr-only">Your Company</span>
-                    <img className="h-8 w-auto" src="/images/icon/mr-egg-sushi.png" alt="" />
+                    <span className="sr-only">계란초밥씨</span>
+                    <img className="h-8 w-auto" src="/images/icon/mr-egg-sushi-trans.png" alt="" />
                 </Link>
                 <div className="flex lg:hidden">
                     <button
@@ -55,7 +58,7 @@ export default function WithRightAlignedNav() {
                             <span className="sr-only">Your Company</span>
                             <img
                                 className="h-8 w-auto"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                                src="/images/icon/mr-egg-sushi-trans.png"
                                 alt=""
                             />
                         </Link>

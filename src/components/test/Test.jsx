@@ -1,7 +1,9 @@
 import HorizontalLinkCards from "@/components/lists/HorizontalLinkCards";
 
-export default function Page() {
+
+export default function Test() {
+
     return (
-        <HorizontalLinkCards />
+        <HorizontalLinkCards/>
     )
 }

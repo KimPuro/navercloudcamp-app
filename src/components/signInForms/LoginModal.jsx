@@ -2,7 +2,7 @@
 import React, {useState} from "react";
 import Link from "next/link";
 import img from "next/image";
-import {loginPost} from "@/utils/loginPost";
+import {loginPost} from "@/service/loginPost";
 import {useRouter} from "next/navigation";
 import CenteredWithSingleAction from "@/components/dialogs/CenteredWithSingleAction";
 import CenteredWithSingleAction2 from "@/components/dialogs/CenteredWithSingleAction2";
@@ -174,9 +174,9 @@ const handlePasswordChange = (e) => {
 
                     <p className="mt-10 text-center text-sm text-gray-500">
                         회원이 아니신가요?{' '}
-                        <Link href="/user/join" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+                        <a href="/user/join" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
                             여기를 눌러 가입하세요!
-                        </Link>
+                        </a>
                     </p>
                 </div>
             </div>

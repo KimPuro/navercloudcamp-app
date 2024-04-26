@@ -1,10 +1,10 @@
+import HorizontalLinkCards from "@/components/lists/HorizontalLinkCards";
 
 
 export default function After() {
 
-    return (
-        <p>
-            after
-        </p>
+    return (<>
+        <HorizontalLinkCards/>
+        </>
     )
 }
