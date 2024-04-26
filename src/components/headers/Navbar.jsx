@@ -14,7 +14,7 @@ const navigation = [
     { name: '랜덤 고양이 사진', href: '/random/cats' },
 ]
 
-export default function WithRightAlignedNav() {
+export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
