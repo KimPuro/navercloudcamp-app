@@ -1,6 +1,6 @@
 import {PhotoIcon, UserCircleIcon} from '@heroicons/react/24/solid'
 import {router} from "next/client";
-import {loginPost, joinPost} from "@/service/fetchPost";
+import {loginPost, joinPost} from "@/services/fetchPost";
 import LoginSuccess from "@/components/dialogs/LoginSuccess";
 import CenteredWithSingleAction2 from "@/components/dialogs/LoginFail";
 import React, {useState} from "react";
