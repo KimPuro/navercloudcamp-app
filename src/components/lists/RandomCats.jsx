@@ -1,16 +1,21 @@
+"use client";
 import {faker} from "@faker-js/faker";
-
-const files = [];
-
-for (let i = 0; i < 8; i++) {
-    files.push({
-        title: '고양' + (i+1),
-        date: faker.date.past().toLocaleDateString(), // 가짜 날짜를 생성하여 파일의 날짜 속성에 할당합니다.
-        source: faker.image.urlLoremFlickr({ category: 'cats' }), // 고양이 이미지 URL을 생성하여 소스 속성에 할당합니다.
-    });
-}
+import {useEffect, useState} from "react";
 
 export default function ImagesWithDetails() {
+        const [files, setFiles] = useState([]);
+
+        useEffect(() => {
+            const generatedFiles = [];
+            for (let i = 0; i < 8; i++) {
+                generatedFiles.push({
+                    title: '고양' + (i + 1),
+                    date: faker.date.past().toLocaleDateString(),
+                    source: faker.image.urlLoremFlickr({ category: 'cats' }),
+                });
+            }
+            setFiles(generatedFiles); // 생성된 파일 목록을 상태로 설정합니다.
+        }, []); // 의존성 배열이 비어 있으므로 useEffect는 컴포넌트가 처음 렌더링될 때만 실행됩니다.
     return (
         <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
             {files.map((file) => (

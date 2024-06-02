@@ -2,10 +2,10 @@
 import React, {useState} from "react";
 import Link from "next/link";
 import img from "next/image";
-import {loginPost} from "@/service/loginPost";
+import {loginPost} from "@/services/fetchPost";
 import {useRouter} from "next/navigation";
-import CenteredWithSingleAction from "@/components/dialogs/CenteredWithSingleAction";
-import CenteredWithSingleAction2 from "@/components/dialogs/CenteredWithSingleAction2";
+import LoginSuccess from "@/components/dialogs/LoginSuccess";
+import CenteredWithSingleAction2 from "@/components/dialogs/LoginFail";
 
 export default function LoginModal() {
 const [username, setUsername] = useState('');
@@ -32,7 +32,7 @@ const handlePasswordChange = (e) => {
         }
     };
     if (loginStatus === 'success') {
-        return <CenteredWithSingleAction />;
+        return <LoginSuccess />;
     } else if (loginStatus === 'failure') {
         return <CenteredWithSingleAction2 />;
     }

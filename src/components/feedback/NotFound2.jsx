@@ -1,4 +1,4 @@
-export default function WithBackgroundImage() {
+export default function NotFound2() {
     return (
         <>
             <main className="relative isolate min-h-full">

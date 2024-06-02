@@ -1,14 +1,14 @@
 'use client'
-import WIthCheckboxes from "@/components/tables/WithCheckboxes";
-import WithRightAlignedNav from "@/components/headers/WithRightAlignedNav";
-import WithVerticalLines from "@/components/lists/WithVerticalLines";
+import WIthCheckboxes from "@/components/tables/UserList";
+import Navbar from "@/components/headers/Navbar";
+import BoardList from "@/components/lists/BoardList";
 
 export default function Test2() {
 
     return (
         <>
-            <WithRightAlignedNav/>
-            <WithVerticalLines/>
+            <Navbar/>
+            <BoardList/>
         </>
     );
 }

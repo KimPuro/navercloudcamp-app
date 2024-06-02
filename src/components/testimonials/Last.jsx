@@ -1,5 +1,5 @@
 import "@/styles/animations.css";
-export default function WithOverlappingImage() {
+export default function Last() {
     return (
         <div className="bg-white pb-16 pt-24 sm:pb-24 sm:pt-32 xl:pb-32">
             <div className="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
@@ -9,7 +9,7 @@ export default function WithOverlappingImage() {
                             <img
                                 className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl blowup"
                                 src="/images/last.png"
-                                alt=""
+                                alt="전현석의 사진"
                             />
                         </div>
                     </div>

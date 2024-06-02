@@ -1,17 +1,13 @@
 import HorizontalLinkCards from "@/components/lists/HorizontalLinkCards";
-import WithRightAlignedNav from "@/components/headers/WithRightAlignedNav";
+import Navbar from "@/components/headers/Navbar";
 import {faker} from "@faker-js/faker";
+import ImagesWithDetails from "@/components/lists/RandomCats";
 
-const Cat = () => {
-    let cats = []
-    for(let i = 0; i<15; i++){
-        cats.push(faker.image.urlLoremFlickr({ category: 'cats' }),)
-    }
-
+const RandomCatsPage = () => {
     return (<>
-            <WithRightAlignedNav/>
-            {cats.map((cat)=> <img src={cat} className="w-1/5 inline-block"/>)}
+            <Navbar/>
+            <ImagesWithDetails/>
         </>
     )
 }
-export default Cat;
+export default RandomCatsPage;
